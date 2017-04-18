@@ -1,7 +1,7 @@
 var map;
 
 function ZoomControl(controlDiv, map) {
-  controlDiv.style.padding = '5px';
+  controlDiv.style.padding = '1em';
 
   // Set CSS for the control wrapper
   var controlWrapper = document.createElement('div');
@@ -12,21 +12,17 @@ function ZoomControl(controlDiv, map) {
   controlWrapper.style.borderRadius = '5px';
   controlWrapper.style.cursor = 'pointer';
   controlWrapper.style.textAlign = 'center';
-  controlWrapper.style.width = '64px'; 
-  controlWrapper.style.height = '128px';
+  controlWrapper.style.width = '4em'; 
+  controlWrapper.style.height = '8em';
   controlDiv.appendChild(controlWrapper);
 
   var zoomInButton = document.createElement('div');
-  zoomInButton.style.width = '64px'; 
-  zoomInButton.style.height = '64px';
   zoomInButton.style.borderBottom = '1px solid grey'
-  zoomInButton.style.backgroundImage = "url('http://aminoapps.com/static/bower/emojify.js/images/emoji/heavy_plus_sign.png')";
+  zoomInButton.innerHTML = zoomInButton.innerHTML + "<img src='http://aminoapps.com/static/bower/emojify.js/images/emoji/heavy_plus_sign.png' style='width: 100%;'/>";
   controlWrapper.appendChild(zoomInButton);
 
   var zoomOutButton = document.createElement('div');
-  zoomOutButton.style.width = '64px'; 
-  zoomOutButton.style.height = '64px';
-  zoomOutButton.style.backgroundImage = 'url("http://aminoapps.com/static/bower/emojify.js/images/emoji/heavy_minus_sign.png")';
+  zoomOutButton.innerHTML = zoomOutButton.innerHTML + "<img src='http://aminoapps.com/static/bower/emojify.js/images/emoji/heavy_minus_sign.png' style='width: 100%;'/>";
   controlWrapper.appendChild(zoomOutButton);
 
   google.maps.event.addDomListener(zoomInButton, 'click', function() {
