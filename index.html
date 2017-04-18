@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Labb 1 Map App</title>
+		<link rel="stylesheet" href="mapStylesheet.css">
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+	</head>
+	<body>
+		<ul class="switching__list">
+		    <li>
+		    	<a href="javascript:map.setCenter(marker.getPosition());" data-name="Black Sea">Dui</a>
+		    </li>
+		    <li>
+		    	<a href="javascript:map.setCenter(marker2.getPosition());" data-name="Baltik Sea">Patrik</a>
+		    </li>
+		    <li>
+		    	<a href="javascript:map.setCenter(marker3.getPosition());" data-name="North Sea">Gustav</a>
+		    </li>
+		</ul>
+		<div id="map-canvas"></div>
+	</body>
+	<script src="testCtrl.js"></script>
+</html>
