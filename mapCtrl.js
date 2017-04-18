@@ -38,7 +38,7 @@ function ZoomControl(controlDiv, map) {
   });
 }
 
-function icon(controlDiv, map) {
+function icon(controlDiv2, map) {
 
   controlDiv2.style.padding = '1em';
 
