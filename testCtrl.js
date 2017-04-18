@@ -38,7 +38,7 @@ function PanControl(controlDiv3, map) {
   controlDiv3.style.padding = '1em';
 
   // Set CSS for the control wrapper
-  var controlWrapper3 = document.createElement('div');
+  var controlWrapper3 = document.createElement('table');
   controlWrapper3.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
   controlWrapper3.style.borderStyle = 'solid';
   controlWrapper3.style.borderColor = 'gray';
@@ -50,20 +50,24 @@ function PanControl(controlDiv3, map) {
   controlWrapper3.style.height = '8em';
   controlDiv3.appendChild(controlWrapper3);
 
-  var leftButton = document.createElement('button');
-  leftButton.innerHTML = leftButton.innerHTML + "LEFT";
+  var upButton = document.createElement('tr');
+  upButton.style.textAlign = "center";
+  upButton.innerHTML = upButton.innerHTML + "<td>UP</td>";
+  controlWrapper3.appendChild(upButton);
+
+  var leftButton = document.createElement('tr');
+  leftButton.style.float = "left";
+  leftButton.innerHTML = leftButton.innerHTML + "<td>LEFT</td>";
   controlWrapper3.appendChild(leftButton);
 
-  var rightButton = document.createElement('button');
+  var rightButton = document.createElement('td');
+  leftButton.style.float = "left";
   rightButton.innerHTML = rightButton.innerHTML + "RIGHT";
   controlWrapper3.appendChild(rightButton);
 
-  var upButton = document.createElement('button');
-  upButton.innerHTML = upButton.innerHTML + "UP";
-  controlWrapper3.appendChild(upButton);
-
-  var downButton = document.createElement('button');
-  downButton.innerHTML = downButton.innerHTML + "DOWN";
+  var downButton = document.createElement('tr');
+  downButton.style.textAlign = "center";
+  downButton.innerHTML = downButton.innerHTML + "<td>DOWN</td>";
   controlWrapper3.appendChild(downButton);
 
   google.maps.event.addDomListener(leftButton, 'click', function() {
@@ -136,7 +140,7 @@ function initialize() {
 	var panControl = new PanControl(panControlDiv, map);
 
 	panControlDiv.index = 1;
-	map.controls[google.maps.ControlPosition.TOP_LEFT].push(panControlDiv);
+	map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(panControlDiv);
 
   var zoomControlDiv = document.createElement('div');
   var zoomControl = new ZoomControl(zoomControlDiv, map);
