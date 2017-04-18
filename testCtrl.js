@@ -34,6 +34,55 @@ function ZoomControl(controlDiv, map) {
   });
 }
 
+function PanControl(controlDiv3, map) {
+  controlDiv3.style.padding = '1em';
+
+  // Set CSS for the control wrapper
+  var controlWrapper3 = document.createElement('div');
+  controlWrapper3.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
+  controlWrapper3.style.borderStyle = 'solid';
+  controlWrapper3.style.borderColor = 'gray';
+  controlWrapper3.style.borderWidth = '1px';
+  controlWrapper3.style.borderRadius = '5px';
+  controlWrapper3.style.cursor = 'pointer';
+  controlWrapper3.style.textAlign = 'center';
+  controlWrapper3.style.width = '8em'; 
+  controlWrapper3.style.height = '8em';
+  controlDiv3.appendChild(controlWrapper3);
+
+  var leftButton = document.createElement('button');
+  leftButton.innerHTML = leftButton.innerHTML + "LEFT";
+  controlWrapper3.appendChild(leftButton);
+
+  var rightButton = document.createElement('button');
+  rightButton.innerHTML = rightButton.innerHTML + "RIGHT";
+  controlWrapper3.appendChild(rightButton);
+
+  var upButton = document.createElement('button');
+  upButton.innerHTML = upButton.innerHTML + "UP";
+  controlWrapper3.appendChild(upButton);
+
+  var downButton = document.createElement('button');
+  downButton.innerHTML = downButton.innerHTML + "DOWN";
+  controlWrapper3.appendChild(downButton);
+
+  google.maps.event.addDomListener(leftButton, 'click', function() {
+    map.panBy(-100, 0);
+  });
+
+  google.maps.event.addDomListener(rightButton, 'click', function() {
+    map.panBy(100, 0);
+  });
+
+  google.maps.event.addDomListener(upButton, 'click', function() {
+    map.panBy(0, -100);
+  });
+
+  google.maps.event.addDomListener(downButton, 'click', function() {
+    map.panBy(0, 100);
+  });
+}
+
 function icon(controlDiv2, map) {
 
   controlDiv2.style.padding = '1em';
@@ -72,18 +121,28 @@ function initialize() {
 	var patrik = new google.maps.LatLng(59.318011, 18.054418);
 	var gustav = new google.maps.LatLng(59.344952, 18.078635);
 
+  
+
 	map = new google.maps.Map(document.getElementById('map-canvas'), mapOptionsWatertemp);
-    
-    marker = new google.maps.Marker( {position: dui, map: map} );
-    marker2 = new google.maps.Marker( {position: patrik, map: map} );
-    marker3 = new google.maps.Marker( {position: gustav, map: map} );
+
+  
+  marker = new google.maps.Marker( {position: dui, map: map} );
+  marker2 = new google.maps.Marker( {position: patrik, map: map} );
+  marker3 = new google.maps.Marker( {position: gustav, map: map} );
+  
     
 
-    var zoomControlDiv = document.createElement('div');
-	var zoomControl = new ZoomControl(zoomControlDiv, map);
+  var panControlDiv = document.createElement('div');
+	var panControl = new PanControl(panControlDiv, map);
 
-	zoomControlDiv.index = 1;
-	map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(zoomControlDiv);
+	panControlDiv.index = 1;
+	map.controls[google.maps.ControlPosition.TOP_LEFT].push(panControlDiv);
+
+  var zoomControlDiv = document.createElement('div');
+  var zoomControl = new ZoomControl(zoomControlDiv, map);
+
+  zoomControlDiv.index = 1;
+  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(zoomControlDiv);
 
 	var controlDiv2 = document.createElement("div");
 	var iconControl = new icon(controlDiv2, map);
