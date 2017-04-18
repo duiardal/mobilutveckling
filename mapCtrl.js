@@ -80,7 +80,7 @@ function initMap() {
   var zoomControl = new ZoomControl(zoomControlDiv, map);
 
   zoomControlDiv.index = 1;
-  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(zoomControlDiv);
+  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(zoomControlDiv);
 
   var controlDiv2 = document.createElement("div");
   var iconControl = new icon(controlDiv2, map);
