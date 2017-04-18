@@ -40,18 +40,18 @@ function ZoomControl(controlDiv, map) {
 
 function icon(controlDiv, map) {
 
-  controlDiv.style.padding = '1em';
+  controlDiv2.style.padding = '1em';
 
-  var controlWrapper = document.createElement("div");
-  controlWrapper.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
-  controlWrapper.style.display = "inline-block";
-  controlWrapper.style.xoom = "1";
-  controlWrapper.style.textAlign = "center";
-  controlWrapper.style.width = "16em";
-  controlWrapper.style.height = "6em";
-  controlWrapper.style.borderRadius = "5px";
+  var controlWrapper2 = document.createElement("div");
+  controlWrapper2.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
+  controlWrapper2.style.display = "inline-block";
+  controlWrapper2.style.xoom = "1";
+  controlWrapper2.style.textAlign = "center";
+  controlWrapper2.style.width = "16em";
+  controlWrapper2.style.height = "6em";
+  controlWrapper2.style.borderRadius = "5px";
 
-  controlDiv.appendChild(controlWrapper);
+  controlDiv2.appendChild(controlWrapper2);
 
   var logo = document.createElement("h1");
   logo.style.fontFamily = "futura";
@@ -59,7 +59,7 @@ function icon(controlDiv, map) {
   //logo.style.backgroundColor = "white";
   //logo.style.width = "50px";
   //logo.style.height = "50px";
-  controlWrapper.appendChild(logo);
+  controlWrapper2.appendChild(logo);
 
 }
 
@@ -86,11 +86,11 @@ function initMap() {
   zoomControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.TOP_RIGHT].push(zoomControlDiv);
 
-  var controlDiv = document.createElement("div");
-  var iconControl = new icon(controlDiv, map);
+  var controlDiv2 = document.createElement("div");
+  var iconControl = new icon(controlDiv2, map);
 
-  controlDiv.index = 1;
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(controlDiv);
+  controlDiv2.index = 1;
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(controlDiv2);
 }
 
 
