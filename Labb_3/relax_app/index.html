@@ -18,70 +18,376 @@
 	</head>
 
 	<body>
-	<ons-page>
+
+		
+
 
 		<div class="toolbar toolbar--material">
-			<div class="toolbar__left toolbar--material__left">
-				<span class="toolbar-button toolbar-button--material">
-					<i class="zmdi zmdi-menu"></i>
-				</span>
-			</div>
 			<div class="toolbar__center toolbar--material__center">
 				Relaxation
 			</div>
-			<div class="toolbar__right toolbar--material__right">
-				<a href="about.html">
-					<span class="toolbar-button toolbar-button--material">
-						<i>About</i>
-					</span>
-				</a>
-			</div>
 		</div>
 
-		</br></br>
+		<!-- VÄLJ ANTINGEN SPLITTER ELLER TABBAR -->
 
-		<ul class="list">
-			<a href="feet.html">
-				<li class="list-item">
-					<div class="list-item__left">
-					<img class="list-item__thumbnail" src="https://raw.githubusercontent.com/mikaelkindborg/evo-demos/master/Demos2014/relaxation-beacons/photos/photo-feet.jpg">
+		<ons-splitter>
+			<ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+				<ons-page>
+					<ons-list>
+						<ons-list-item onclick="fn.load('face.html')" tappable>
+							face
+						</ons-list-item>
+						<ons-list-item onclick="fn.load('feet.html')" tappable>
+							feet
+						</ons-list-item>
+						<ons-list-item onclick="fn.load('shoulders.html')" tappable>
+							shoulders
+						</ons-list-item>
+						<ons-list-item onclick="fn.load('about.html')" tappable>
+							about
+						</ons-list-item>
+					</ons-list>
+				</ons-page>
+			</ons-splitter-side>
+			<ons-splitter-content id="content" page="face.html"></ons-splitter-content>
+		</ons-splitter>
+
+		<ons-tabbar>
+			<ons-tab label="Face" page="face.html" active>
+			</ons-tab>
+			<ons-tab label="Feet" page="feet.html">
+			</ons-tab>
+			<ons-tab label="Shoulders" page="shoulders.html">
+			</ons-tab>
+			<ons-tab label="About" page="about.html">
+			</ons-tab>
+		</ons-tabbar>
+
+		<ons-template id="face.html">
+			<ons-page>
+				<div class="toolbar toolbar--material">
+					<div class="toolbar__left toolbar--material__left">
+						<ons-toolbar-button onclick="fn.open()">
+							<ons-icon icon="md-menu"></ons-icon>
+						</ons-toolbar-button>
+					</div>
+					<div class="toolbar__center toolbar--material__center">
+						Relaxation
+					</div>
+					<div class="toolbar__right toolbar--material__right">
+						<ons-toolbar-button tappable onclick="showDialog('dialog-1')">Button</ons-toolbar-button>
+					</div>
+				</div>
+
+
+
+				<ons-dialog id="dialog-1">
+				  <div style="text-align: center; padding: 10px;">
+				    <p>
+				      WOHOOOOO
+				    <p>
+
+				    <p>
+				      <ons-button onclick="hideDialog('dialog-1')">Close</ons-button>
+				    </p>
+				  </div>
+				</ons-dialog>
+
+				<div class="toolbar__center">
+					Feel your face
+				</div>
+
+				<div>
+					<img src="https://raw.githubusercontent.com/mikaelkindborg/evo-demos/master/Demos2014/relaxation-beacons/photos/photo-face.jpg" style="width: 100%; height: auto;"/>
+				</div>					
+
+				<ol class="list">
+					<li class="list-item">
+						<div class="list-item__center">Become aware of your face.</div>
+					</li>
+					<li class="list-item">
+						<div class="list-item__center">Feel the forehead.</div>
+					</li>
+					<li class="list-item">
+						<div class="list-item__center">The eyebrows.</div>
+					</li>
+					<li class="list-item">
+						<div class="list-item__center">Eyes.</div>
+					</li>
+					<li class="list-item">
+						<div class="list-item__center">Nose.</div>
+					</li>
+					<li class="list-item">
+						<div class="list-item__center">Nostrils.</div>
+					</li>
+					<li class="list-item">
+						<div class="list-item__center">Air flowing through the nostrils.</div>
+					</li>
+					<li class="list-item">
+						<div class="list-item__center">Cheeks.</div>
+					</li>
+					<li class="list-item">
+						<div class="list-item__center">Jaw.</div>
+					</li>
+					<li class="list-item">
+						<div class="list-item__center">Lips.</div>
+					</li>
+					<li class="list-item">
+						<div class="list-item__center">Tongue.</div>
+					</li>
+					<li class="list-item">
+						<div class="list-item__center">Whole of the head.</div>
+					</li>
+					<li class="list-item">
+						<div class="list-item__center">The space surrounding the head.</div>
+					</li>
+				</ol>
+				<ons-list>
+				  <ons-list-item>
+				    <div class="center">
+				      Done
+				    </div>
+				    <div class="right">
+				      <ons-switch></ons-switch>
+				    </div>
+				  </ons-list-item>
+				</ons-list>
+			</ons-page>
+		</ons-template>
+
+
+			<ons-template id="feet.html">
+				<ons-page>
+
+					<div class="toolbar toolbar--material">
+						<div class="toolbar__left toolbar--material__left">
+							<ons-toolbar-button onclick="fn.open()">
+								<ons-icon icon="md-menu"></ons-icon>
+							</ons-toolbar-button>
+						</div>
+						<div class="toolbar__center toolbar--material__center">
+							Relaxation
+						</div>
+						<div class="toolbar__right toolbar--material__right">
+							<ons-toolbar-button tappable onclick="showDialog('dialog-2')">Button</ons-toolbar-button>
+						</div>
 					</div>
 
-					<div class="list-item__center">
-					<div class="list-item__title">Feel your feet</div>
-					</div>
-				</li>
-			</a>
+					<ons-dialog id="dialog-2">
+					  <div style="text-align: center; padding: 10px;">
+					    <p>
+					      WOHOOOOO
+					    <p>
 
-			<a href="face.html">
-				<li class="list-item">
-					<div class="list-item__left">
-					<img class="list-item__thumbnail" src="https://raw.githubusercontent.com/mikaelkindborg/evo-demos/master/Demos2014/relaxation-beacons/photos/photo-face.jpg">
-					</div>
+					    <p>
+					      <ons-button onclick="hideDialog('dialog-2')">Close</ons-button>
+					    </p>
+					  </div>
+					</ons-dialog>
 
-					<div class="list-item__center">
-					<div class="list-item__title">Feel you face</div>
-					</div>
-				</li>
-			</a>
-
-			<a href="shoulders.html">
-				<li class="list-item">
-					<div class="list-item__left">
-					<img class="list-item__thumbnail" src="https://github.com/mikaelkindborg/evo-demos/blob/master/Demos2014/relaxation-beacons/photos/photo-shoulders-1.jpg?raw=true">
+					<div class="toolbar__center">
+						Feel your feet
 					</div>
 
-					<div class="list-item__center">
-					<div class="list-item__title">Feel you shoulders</div>
+					<div>
+						<img src="https://raw.githubusercontent.com/mikaelkindborg/evo-demos/master/Demos2014/relaxation-beacons/photos/photo-feet.jpg" style="width: 100%; height: auto;"/>
 					</div>
-				</li>
-			</a>
-		</ul>
 
-		<div class="bottom-bar">
+					<ol class="list">
+						<li class="list-item">
+							<div class="list-item__center">Stand on your feet.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Experience the contact with the ground.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Feel into the soles of the feet.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Feel the knees.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">The hips.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">The spine.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Shoulders.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Neck.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Head.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Feel the connection between the top of the head and the feet.</div>
+						</li>
+					</ol>
+
+					<ons-list>
+					  <ons-list-item>
+					    <div class="center">
+					      Done
+					    </div>
+					    <div class="right">
+					      <ons-switch></ons-switch>
+					    </div>
+					  </ons-list-item>
+					</ons-list>
+				</ons-page>
+			</ons-template>
+
+			<ons-template id="shoulders.html">
+				<ons-page>
+
+					<div class="toolbar toolbar--material">
+						<div class="toolbar__left toolbar--material__left">
+							<ons-toolbar-button onclick="fn.open()">
+								<ons-icon icon="md-menu"></ons-icon>
+							</ons-toolbar-button>
+						</div>
+						<div class="toolbar__center toolbar--material__center">
+							Relaxation
+						</div>
+						<div class="toolbar__right toolbar--material__right">
+							<ons-toolbar-button tappable onclick="showDialog('dialog-3')">Button</ons-toolbar-button>
+						</div>
+					</div>
+
+					<ons-dialog id="dialog-3">
+					  <div style="text-align: center; padding: 10px;">
+					    <p>
+					      WOHOOOOO
+					    <p>
+
+					    <p>
+					      <ons-button onclick="hideDialog('dialog-3')">Close</ons-button>
+					    </p>
+					  </div>
+					</ons-dialog>
+					<div class="toolbar__center">
+						Feel your shoulders
+					</div>
+
+					<div>
+						<img src="https://github.com/mikaelkindborg/evo-demos/blob/master/Demos2014/relaxation-beacons/photos/photo-shoulders-1.jpg?raw=true" style="width: 100%; height: auto;"/>
+					</div>
+
+					</br>
+
+					<ol class="list">
+						<li class="list-item">
+							<div class="list-item__center">Let your arms hang loose.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Become aware of the shoulders.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Slightly lift one shoulder and release it.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Let the shoulder come all the way down</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Lift the other shoulder and release it.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Alternate three more times on each side.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Experience the breath flowing in and out of the body.</div>
+						</li>
+					</ol>
+
+					<ons-list>
+					  <ons-list-item>
+					    <div class="center">
+					      Done
+					    </div>
+					    <div class="right">
+					      <ons-switch></ons-switch>
+					    </div>
+					  </ons-list-item>
+					</ons-list>
+				</ons-page>
+			</ons-template>
+
+			<ons-template id="about.html">
+				<ons-page>
+
+					<div class="toolbar toolbar--material">
+						<div class="toolbar__left toolbar--material__left">
+							<ons-toolbar-button onclick="fn.open()">
+								<ons-icon icon="md-menu"></ons-icon>
+							</ons-toolbar-button>
+						</div>
+						<div class="toolbar__center toolbar--material__center">
+							Relaxation
+						</div>
+						<div class="toolbar__right toolbar--material__right">
+							<ons-toolbar-button tappable onclick="showDialog('dialog-4')">Button</ons-toolbar-button>
+						</div>
+					</div>
+
+					<ons-dialog id="dialog-4">
+					  <div style="text-align: center; padding: 10px;">
+					    <p>
+					      WOHOOOOO
+					    <p>
+
+					    <p>
+					      <ons-button onclick="hideDialog('dialog-4')">Close</ons-button>
+					    </p>
+					  </div>
+					</ons-dialog>
+
+					
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+				</ons-page>
+			</ons-template>
+
+		
+
+		<!--<div class="bottom-bar">
 			<div class="bottom-bar__line-height" style="text-align:center"></div>
-		</div>
-	</ons-page>
+		</div>-->
+
+		<script>
+		var showDialog = function(id) {
+		  document
+		    .getElementById(id)
+		    .show();
+		};
+
+		var hideDialog = function(id) {
+		  document
+		    .getElementById(id)
+		    .hide();
+		};
+
+		
+		</script>
+
+		<script>
+		window.fn = {};
+
+		window.fn.open = function() {
+		  var menu = document.getElementById('menu');
+		  hyper.log(menu);
+		  menu.open();
+		};
+
+		window.fn.load = function(page) {
+		  var content = document.getElementById('content');
+		  var menu = document.getElementById('menu');
+		  content.load(page)
+		    .then(menu.close.bind(menu));
+		};
+		</script>
 	</body>
 
 </html>
