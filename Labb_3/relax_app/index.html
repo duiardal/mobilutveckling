@@ -18,70 +18,199 @@
 	</head>
 
 	<body>
-	<ons-page>
-
 		<div class="toolbar toolbar--material">
-			<div class="toolbar__left toolbar--material__left">
-				<span class="toolbar-button toolbar-button--material">
-					<i class="zmdi zmdi-menu"></i>
-				</span>
-			</div>
 			<div class="toolbar__center toolbar--material__center">
 				Relaxation
 			</div>
-			<div class="toolbar__right toolbar--material__right">
-				<a href="about.html">
-					<span class="toolbar-button toolbar-button--material">
-						<i>About</i>
-					</span>
-				</a>
-			</div>
 		</div>
+		<ons-tabbar>
+			<ons-tab label="Face" page="face.html">
+			</ons-tab>
+			<ons-tab label="Feet" page="feet.html">
+			</ons-tab>
+			<ons-tab label="Shoulders" page="shoulders.html">
+			</ons-tab>
+			<ons-tab label="About" page="about.html">
+			</ons-tab>
+		</ons-tabbar>
 
-		</br></br>
-
-		<ul class="list">
-			<a href="feet.html">
-				<li class="list-item">
-					<div class="list-item__left">
-					<img class="list-item__thumbnail" src="https://raw.githubusercontent.com/mikaelkindborg/evo-demos/master/Demos2014/relaxation-beacons/photos/photo-feet.jpg">
+			<ons-template id="face.html">
+				<ons-page>
+					<div class="toolbar toolbar--material">
+						<div class="toolbar__center toolbar--material__center">
+							Relaxation
+						</div>
 					</div>
 
-					<div class="list-item__center">
-					<div class="list-item__title">Feel your feet</div>
-					</div>
-				</li>
-			</a>
-
-			<a href="face.html">
-				<li class="list-item">
-					<div class="list-item__left">
-					<img class="list-item__thumbnail" src="https://raw.githubusercontent.com/mikaelkindborg/evo-demos/master/Demos2014/relaxation-beacons/photos/photo-face.jpg">
+					<div class="toolbar__center">
+						Feel your face
 					</div>
 
-					<div class="list-item__center">
-					<div class="list-item__title">Feel you face</div>
-					</div>
-				</li>
-			</a>
+					<div>
+						<img src="https://raw.githubusercontent.com/mikaelkindborg/evo-demos/master/Demos2014/relaxation-beacons/photos/photo-face.jpg" style="width: 100%; height: auto;"/>
+					</div>					
 
-			<a href="shoulders.html">
-				<li class="list-item">
-					<div class="list-item__left">
-					<img class="list-item__thumbnail" src="https://github.com/mikaelkindborg/evo-demos/blob/master/Demos2014/relaxation-beacons/photos/photo-shoulders-1.jpg?raw=true">
+					<ol class="list">
+						<li class="list-item">
+							<div class="list-item__center">Become aware of your face.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Feel the forehead.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">The eyebrows.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Eyes.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Nose.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Nostrils.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Air flowing through the nostrils.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Cheeks.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Jaw.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Lips.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Tongue.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Whole of the head.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">The space surrounding the head.</div>
+						</li>
+					</ol>
+				</ons-page>
+			</ons-template>
+
+			<ons-template id="feet.html">
+				<ons-page>
+
+					<div class="toolbar toolbar--material">
+						<div class="toolbar__center toolbar--material__center">
+							Relaxation
+						</div>
 					</div>
 
-					<div class="list-item__center">
-					<div class="list-item__title">Feel you shoulders</div>
+					<div class="toolbar__center">
+						Feel your feet
 					</div>
-				</li>
-			</a>
-		</ul>
 
-		<div class="bottom-bar">
+					<div>
+						<img src="https://raw.githubusercontent.com/mikaelkindborg/evo-demos/master/Demos2014/relaxation-beacons/photos/photo-feet.jpg" style="width: 100%; height: auto;"/>
+					</div>
+
+					<ol class="list">
+						<li class="list-item">
+							<div class="list-item__center">Stand on your feet.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Experience the contact with the ground.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Feel into the soles of the feet.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Feel the knees.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">The hips.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">The spine.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Shoulders.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Neck.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Head.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Feel the connection between the top of the head and the feet.</div>
+						</li>
+					</ol>
+				</ons-page>
+			</ons-template>
+
+			<ons-template id="shoulders.html">
+				<ons-page>
+
+					<div class="toolbar toolbar--material">
+						<div class="toolbar__center toolbar--material__center">
+							Relaxation
+						</div>
+					</div>
+					<div class="toolbar__center">
+						Feel your shoulders
+					</div>
+
+					<div>
+						<img src="https://github.com/mikaelkindborg/evo-demos/blob/master/Demos2014/relaxation-beacons/photos/photo-shoulders-1.jpg?raw=true" style="width: 100%; height: auto;"/>
+					</div>
+
+					</br>
+
+					<ol class="list">
+						<li class="list-item">
+							<div class="list-item__center">Let your arms hang loose.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Become aware of the shoulders.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Slightly lift one shoulder and release it.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Let the shoulder come all the way down</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Lift the other shoulder and release it.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Alternate three more times on each side.</div>
+						</li>
+						<li class="list-item">
+							<div class="list-item__center">Experience the breath flowing in and out of the body.</div>
+						</li>
+					</ol>
+				</ons-page>
+			</ons-template>
+
+			<ons-template id="about.html">
+				<ons-page>
+
+					<div class="toolbar toolbar--material">
+						<div class="toolbar__center toolbar--material__center">
+							Relaxation
+						</div>
+					</div>
+
+					
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+				</ons-page>
+			</ons-template>
+
+		
+
+		<!--<div class="bottom-bar">
 			<div class="bottom-bar__line-height" style="text-align:center"></div>
-		</div>
-	</ons-page>
+		</div>-->
 	</body>
 
 </html>
