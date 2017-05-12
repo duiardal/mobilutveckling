@@ -1,0 +1,24 @@
+<ion-navbar>
+	<label class="item item-input">
+		<i class="icon ion-edit placeholder-icon"></i>
+		<input id="messageField" ng-model="messageContent" type="text" placeholder="Type your message"/>
+	</label>
+	<button class="button button-block button-positive" ng-click="sendMessage()" type="submit">Send</button>
+</ion-navbar>
+	
+<!--<div class="card" ng-repeat="message in messages">
+	<img src="{{avatarUrl(message.sender_uuid)}}" alt="{{message.sender_uuid}}">
+	<p class="title">Anonymous robot #{{ message.sender_uuid }}</p>
+	<p>{{ message.date | date:"h:mma"}}</p>
+	<h4>{{ message.content }}</h4>
+</div>-->
+
+<ion-list>
+	<ion-item ng-repeat="message in messages track by message.uuid">		
+		{{ message.content }}
+	<!--<div class="col col-25">Anonymous robot #{{ message.sender_uuid }} {{ message.date | date:"h:mma"}}</div>-->
+		<!--<img src="{{avatarUrl(message.sender_uuid)}}" alt="{{message.sender_uuid}}">-->
+		<!--<p class="title">Anonymous robot #{{ message.sender_uuid }} {{ message.date | date:"h:mma"}}</p>
+		<h3>{{ message.content }}</h3>-->
+	</ion-item>
+</ion-list>
